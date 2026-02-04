@@ -42,6 +42,8 @@
  <strong>Résultat :</strong>
 
  <?php
+    date_default_timezone_set("Europe/Paris");
+
     $h = date("H");
     $m = date("i");
     $prenom = "Edgar";

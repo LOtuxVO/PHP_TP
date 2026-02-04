@@ -22,23 +22,33 @@
  <strong>Résultat :</strong>
 
  <?php
+     date_default_timezone_set("Europe/Paris");
 
-    // Votre code ici
-
+    $h = date("H");
+    $m = date("i");
+    $prenom = "Edgar";
+    $date = date("d/m/Y");
     ?>
 
  <h3> 1)</h3>
 
  <?php
-
-    // Votre code ici
-
+    echo "Bonjour $prenom, nous sommes le $date. Il est actuellement $h h $m <br>";
+    
+    if ($h < 12) {
+        echo "C'est le matin";
+    } else {
+        echo "C'est l'après-midi";
+    }
     ?>
  <h3> 2)</h3>
  <?php
-    // Votre code ici
-
-
+    $politesse = "Bonjour";
+    if ($h > 19) {
+        $politesse = "Bonsoir";
+    }
+    
+    echo "$politesse $prenom, nous sommes le $date. Il est actuellement $h h $m <br>";
     ?>
 
 
@@ -58,7 +68,14 @@
 
  <?php
 
-    // Votre code ici
+    $isHiver = true;
+    
+    if ($isHiver) {
+        $h_ete = $h + 1;
+        if ($h_ete == 24) $h_ete = 0;
+        
+        echo "Cet été il ne sera pas ${h}h${m} mais ${h_ete}h${m}";
+    }
     ?>
 
  <h2>Exercice 3 :</h2>
@@ -79,7 +96,23 @@
 
  <?php
 
-    // Votre code ici
+    $age = 18;
+    $sexe = "Homme";
+    $isMariee = false;
+
+    if ($sexe == "Homme") {
+        if ($age < 18) {
+            echo "Bonjour jeune homme";
+        } elseif ($age >= 18 && $age <= 60) {
+            echo "Bonjour monsieur";
+        }
+    } elseif ($sexe == "Femme") {
+        if ($age < 18) {
+            echo "Bonjour jeune fille";
+        } elseif ($age > 40 || $isMariee) {
+            echo "Bonjour madame";
+        }
+    }
 
     ?>
 
