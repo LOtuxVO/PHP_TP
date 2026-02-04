@@ -17,7 +17,13 @@
  <br>
 
  <?php
-    // Votre code ici
+    $jours_semaine = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+
+    echo "<ul>";
+    foreach ($jours_semaine as $jour) {
+        echo "<li>$jour</li>";
+    }
+    echo "</ul>";
     ?>
 
 
@@ -42,7 +48,20 @@
  <strong>Résultat :</strong>
 
  <?php
-    // Votre code ici
+    $mois_annee = [
+        1 => "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+        "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+    ];
+
+    $jour_nom = $jours_semaine[date('N') - 1];
+
+    $jour_num = date('d');
+
+    $mois_nom = $mois_annee[date('n')];
+
+    $annee = date('Y');
+
+    echo "Nous sommes le <strong>$jour_nom</strong> <strong>$jour_num</strong> <strong>$mois_nom</strong> <strong>$annee</strong>";
     ?>
 
  <h2>Exercice 3 </h2>
@@ -58,8 +77,15 @@ $tab= [
  <strong>Résultat :</strong>
 
  <?php
-    // Votre code ici
+    $tab = [
+        "Dupont" => ["Paul", "Paris", 27],
+        "Schmoll" => ["Kirk", "Berlin", 35],
+        "Smith" => ["Stan", "Londres", 45]
+    ];
 
+    foreach ($tab as $nom => $infos) {
+        echo "$infos[0] $nom a $infos[2] ans et habite à $infos[1]<br>";
+    }
     ?>
 
 
