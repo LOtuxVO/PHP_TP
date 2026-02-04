@@ -23,10 +23,25 @@
     3) Faire la même boucle mais avec un FOR
  </p>
 
- <strong>Résultat :</strong>
+ <strong>Résultat :<br></strong>
 
  <?php
-   // Votre code ici
+   // 1) Sans boucle
+   echo "5! <br> 4! <br> 3! <br> 2! <br> 1! <br> BONNE ANNÉE !!! <br><br>";
+
+   // 2) Boucle WHILE
+   $i = 5;
+   while ($i > 0) {
+       echo "$i! <br>";
+       $i--;
+   }
+   echo "BONNE ANNÉE !!! <br><br>";
+
+   // 3) Boucle FOR
+   for ($i = 5; $i > 0; $i--) {
+       echo "$i! <br>";
+   }
+   echo "BONNE ANNÉE !!! <br>";
    ?>
 
 
@@ -45,8 +60,21 @@
  <strong>Résultat :</strong>
 
  <?php
+   $x = 10;
+   $somme = 0;  
 
-   // CODE HERE
+   echo "<h3>1)</h3>";
+   for ($i = 1; $i <= $x; $i++) {
+       echo $i . ($i < $x ? " + " : "");
+   }
+   
+   echo "<h3>2)</h3>";
+
+   for ($i = 1; $i <= $x; $i++) {
+       echo $i . ($i < $x ? " + " : "");
+       $somme += $i;
+   }
+   echo " = $somme";
    ?>
 
  <h2>Exercice 3 :</h2>
@@ -70,8 +98,13 @@
 
  <?php
 
-   // TODO
-
+   for ($i = 1; $i <= 3; $i++) {
+       echo "Table de $i :<br>";
+       for ($j = 1; $j <= 9; $j++) {
+           echo "$i * $j = " . ($i * $j) . "<br>";
+       }
+       echo "<br>";
+   }
    ?>
 
 
