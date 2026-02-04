@@ -18,9 +18,20 @@ ob_start();
 </ol>
 
 <?php
-
-// Votre code ici
-
+    function afficherTable($n, $min = 1, $max = 9) {
+        echo '<div style="display:flex; flex-wrap:wrap; gap:20px;">';
+        for ($i = 1; $i <= $n; $i++) {
+            echo '<div style="border:1px solid #ccc; padding:15px; border-radius:5px; background-color:#f9f9f9;">';
+            echo "<h4 style='margin-top:0;'>Table de $i</h4>";
+            for ($j = $min; $j <= $max; $j++) {
+                echo "$i x $j = " . ($i * $j) . "<br>";
+            }
+            echo '</div>';
+        }
+        echo '</div>';
+    }
+    
+    afficherTable(6, 1, 9);
 ?>
 
 
@@ -33,6 +44,20 @@ ob_start();
     <li>Maintenant ajouter le <strong>typage</strong> sur les param&egrave;tres et sur le retour de la fonction</li>
 </ol>
 
+
+<?php
+    function estPair(int $n): int {
+        return $n % 2 === 0;
+    }
+
+    $nombre = 27;
+
+    if (estPair($nombre)) {
+        echo "$nombre est pair<br>";
+    } else {
+        echo "$nombre est impair<br>";
+    }
+?>
 
 <?php $content = ob_get_clean(); ?>
 
