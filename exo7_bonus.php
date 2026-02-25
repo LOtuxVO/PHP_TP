@@ -1,6 +1,6 @@
 <?php
- $identifiant = $_POST['identifiant'];
- $mdp = $_POST['mdp'];
+ $identifiant = htmlspecialchars($_POST['identifiant']);
+ $mdp = htmlspecialchars($_POST['mdp']);
 
     if ($identifiant == "admin" && $mdp == "1234") {
         echo "Bienvenue sur la page du site";

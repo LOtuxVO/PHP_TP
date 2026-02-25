@@ -1,11 +1,11 @@
 <?php
- echo "en GET : nom : " . $_GET['nom'] . ", prenom : " . $_GET['prenom']."<br>";
- echo "en POST : nom : " . $_POST['nom'] . ", prenom : " . $_POST['prenom']."<br>";
+ echo "en GET : nom : " . htmlspecialchars($_GET['nom']) . ", prenom : " . htmlspecialchars($_GET['prenom'])."<br>";
+ echo "en POST : nom : " . htmlspecialchars($_POST['nom']) . ", prenom : " . htmlspecialchars($_POST['prenom'])."<br>";
 ?> </br></br>
 
 <?php
- $age = intval($_POST['age']);
- $sexe = $_POST['sexe'];
+ $age = intval(htmlspecialchars($_POST['age']));
+ $sexe = htmlspecialchars($_POST['sexe']);
 
     if ($sexe == "Homme") {
         if ($age < 18) {
