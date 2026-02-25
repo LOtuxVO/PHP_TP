@@ -51,6 +51,18 @@
 
     </br>
     <input type="submit" value="valider"/>
+</form>
+
+</br></br><p>
+    <strong>exo7 bonus</strong> : login avec mdp
+</p>
+
+ <form action="exo7_bonus.php" method="post">
+     identifiant : <input type="text" name="identifiant" />
+     mot de passe : <input type="password" name="mdp" />
+    </br>
+    <input type="submit" value="Accéder au site"/>
+</form>
 
  <?php $content = ob_get_clean(); ?>
 
