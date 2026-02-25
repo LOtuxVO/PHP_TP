@@ -54,8 +54,8 @@
 </form>
 
 </br></br><p>
-    <strong>exo7 bonus</strong> : login avec mdp
-</p>
+    <h2>exo7 bonus :</h2>Login avec identifiant et mot de passe.</p>
+
 
  <form action="exo7_bonus.php" method="post">
      identifiant : <input type="text" name="identifiant" />
