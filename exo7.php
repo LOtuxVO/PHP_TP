@@ -23,6 +23,7 @@
  <?php
     echo '<a href="exo7_resultats.php?nom=Pulles&prenom=Edgar">Lien avec parametres en GET</a>';
 
+
     ?>
 
     <form action="exo7_resultats.php" method="post">
@@ -42,6 +43,14 @@
          exo7_resultats.php</code>. Tester votre code par rapport aux conditions de l'<strong>exercice 3 du chapitre 3</strong> !
  </p>
 
+<form action="exo7_resultats.php" method="post">
+     Age : <input type="text" name="age" />
+
+    <input type="radio" name="sexe" value="Homme"/> Homme
+    <input type="radio" name="sexe" value="Femme"/> Femme
+
+    </br>
+    <input type="submit" value="valider"/>
 
  <?php $content = ob_get_clean(); ?>
 
